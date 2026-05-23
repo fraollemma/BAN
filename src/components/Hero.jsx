@@ -31,7 +31,7 @@ export default function Hero() {
           <div className="mt-8 flex gap-5">
 
             <button className="bg-yellow-500 hover:bg-yellow-600 transition px-8 py-4 rounded-lg font-semibold">
-              Our Services
+             <a href="#services">Our Services</a>
             </button>
 
             <button className="border border-white px-8 py-4 rounded-lg font-semibold">

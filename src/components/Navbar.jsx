@@ -22,8 +22,8 @@ export default function Navbar() {
         </div>
 
         <nav className="flex gap-10 font-medium">
-          <a href="#">Home</a>
-          <a href="#">Services</a>
+          <a href="/">Home</a>
+          <a href="#services">Services</a>
           <a href="#">About</a>
           <a href="#">Contact</a>
         </nav>

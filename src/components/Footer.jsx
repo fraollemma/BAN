@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0B1F3A] text-white border-t-4 border-orange-500">
 
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      <div className="max-w-7xl mx-auto px-6 py-5">
 
         {/* TOP SECTION */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="border-t border-white/10 mt-8 pt-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+        <div className="border-t border-white/10 mt-4 pt-2 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
 
           <p>© 2024 BAN-DRCE. All rights reserved.</p>
 

@@ -59,7 +59,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative py-20 bg-[#f8f8f8] overflow-hidden">
+    <section id="services" className="relative py-20 bg-[#f8f8f8] overflow-hidden">
 
       {/* Decorative Side Patterns */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 opacity-10 text-[200px] font-bold text-yellow-600">
