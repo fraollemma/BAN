@@ -5,127 +5,109 @@ import {
   Users,
   Briefcase,
   Target,
-} from "lucide-react"
+} from "lucide-react";
 
 const services = [
   {
     title: "Research",
-    description:
-      "High-quality research to inform policies and drive development.",
+    description: "High-quality research to inform policies and drive development.",
     image: "/research.jpg",
-    icon: <Search size={30} />,
+    icon: <Search className="w-7 h-7 text-[#C27D38]" />,
   },
-
   {
     title: "Data Services",
-    description:
-      "Data collection, management, and analysis you can trust.",
+    description: "Data collection, management, and analysis you can trust.",
     image: "/data.jpg",
-    icon: <BarChart3 size={30} />,
+    icon: <BarChart3 className="w-7 h-7 text-[#C27D38]" />,
   },
-
   {
     title: "Training",
-    description:
-      "Capacity building and training for individuals and organizations.",
-    image: "/training.jpeg",
-    icon: <GraduationCap size={30} />,
+    description: "Capacity building and training for individuals and organizations.",
+    image: "/training.jpeg", // Using the correct extension from your file path
+  icon: <GraduationCap className="w-7 h-7 text-[#C27D38]" />,
   },
-
   {
     title: "Technical Assistance",
-    description:
-      "Expert support for implementation and project success.",
+    description: "Expert support for implementation and project success.",
     image: "/tech.jpg",
-    icon: <Users size={30} />,
+    icon: <Users className="w-7 h-7 text-[#C27D38]" />,
   },
-
   {
     title: "Business Consulting",
-    description:
-      "Organizational design, feasibility studies, and business planning.",
-    image: "/business.jpg",
-    icon: <Briefcase size={30} />,
+    description: "Organizational design, feasibility studies, and business planning.",
+    image: "/tech.jpg", // Adjusted to match your available assets
+    icon: <Briefcase className="w-7 h-7 text-[#C27D38]" />,
   },
-
   {
     title: "Impact Evaluation",
-    description:
-      "Rigorous evaluations to measure impact and improve outcomes.",
-    image: "/impact.jpg",
-    icon: <Target size={30} />,
+    description: "Rigorous evaluations to measure impact and improve outcomes.",
+    image: "/research.jpg", // Adjusted to match your available assets
+    icon: <Target className="w-7 h-7 text-[#C27D38]" />,
   },
-]
+];
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-20 bg-[#f8f8f8] overflow-hidden">
-
-      {/* Decorative Side Patterns */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 opacity-10 text-[200px] font-bold text-yellow-600">
+    <section id="services" className="relative py-16 md:py-24 bg-[#FAFAFA] overflow-hidden">
+      
+      {/* Decorative Side Patterns - Hidden on mobile, shown on large screens */}
+      <div className="hidden xl:block absolute left-4 top-1/2 -translate-y-1/2 opacity-20 text-[120px] font-bold text-[#C27D38] select-none">
+        ◈
+      </div>
+      <div className="hidden xl:block absolute right-4 top-1/2 -translate-y-1/2 opacity-20 text-[120px] font-bold text-[#C27D38] select-none">
         ◈
       </div>
 
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-10 text-[200px] font-bold text-yellow-600">
-        ◈
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6">
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
         {/* Heading */}
-        <div className="text-center mb-14">
-
-          <h2 className="text-5xl font-bold text-[#0B1F3A]">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0D2B5B] relative inline-block pb-3">
             Our Services
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-[#C27D38] rounded-full"></span>
           </h2>
-
-          <div className="w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full"></div>
-
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
-
+        {/* Cards Grid - Responsive Columns Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 items-stretch">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden border-t-4 border-yellow-500 hover:shadow-xl transition duration-300 flex flex-col"
+              className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden border border-gray-100/80 group"
             >
-
-              {/* Content */}
-              <div className="p-6 flex flex-col items-center text-center flex-grow">
-
-                {/* Icon */}
-                <div className="w-16 h-16 rounded-full bg-yellow-500 text-white flex items-center justify-center mb-5 shadow-md">
+              {/* Top Section Content */}
+              <div className="p-6 flex flex-col items-center text-center">
+                
+                {/* Icon Container (Matches the mockup's cleaner style) */}
+                <div className="w-14 h-14 rounded-full bg-amber-50/60 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[22px] font-bold text-[#0B1F3A] mb-4">
+                <h3 className="text-lg font-bold text-[#0D2B5B] mb-2 tracking-tight line-clamp-1">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-[15px] leading-7">
+                <p className="text-gray-500 text-sm leading-relaxed line-clamp-4">
                   {service.description}
                 </p>
-
               </div>
 
-              {/* Bottom Image */}
-              <img
-                src={service.image}
-                alt={service.title}
-                className="h-40 w-full object-cover"
-              />
+              {/* Bottom Image Component */}
+              <div className="overflow-hidden h-40 mt-auto">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale-[20%] group-hover:grayscale-0"
+                />
+              </div>
 
             </div>
           ))}
-
         </div>
 
       </div>
-
     </section>
-  )
+  );
 }
